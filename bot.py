@@ -65,7 +65,7 @@ def reply_to_tweets():
         if '#cansado' in mention.full_text.lower():
             print('enviado')
             api.update_status('@' + mention.user.screen_name + random.choice(lista_cansado), mention.id)
-        if '#vazio' in mention.full_text.lower():
+        if '#vazio_existencial' in mention.full_text.lower():
             print('enviado')
             api.update_status('@' + mention.user.screen_name + random.choice(lista_vazio), mention.id)
 
