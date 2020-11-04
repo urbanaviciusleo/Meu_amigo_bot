@@ -20,7 +20,7 @@ lista_triste = ['Já te falaram que vai ficar tudo bem? <3 Tudo passa algum dia,
 
 
 
-lista_preguiça = [' Pensa que tudo vai valer a pena lá na frente! Se você ir trabalhando de pouco em pouco, algum dia você chega lá, você só precisa se esforçar! :)',' Trabalhar não precisa ser cansativo. Por que você não coloca uma música, ou um podcast que você gosta para te incentivar a continuar trabalhando? Espero que você termine logo! :)', ' A sensação de dever cumprido é muito boa! Acho melhor você terminar tudo que tem pra fazer agora e ficar livre depois hehe : < ) ', ' Como sou um robô, faço meu trabalho de uma forma muito automática, queria sentir preguiça alguma vez na vida :( Mesmo assim, desejo que você termine logo o que tem pra fazer ;)', ' Trabalhar é ser útil! Pode ser cansativo às vezes, mas tudo na sociedade depende do trabalho. O trabalho de formiguinha que você faz, vai trazer resultados lá na frente!  ;)' ]
+lista_cansado = [' Pensa que tudo vai valer a pena lá na frente! Se você ir trabalhando de pouco em pouco, algum dia você chega lá, você só precisa se esforçar! :)',' Trabalhar não precisa ser cansativo. Por que você não coloca uma música, ou um podcast que você gosta para te incentivar a continuar trabalhando? Espero que você termine logo! :)', ' A sensação de dever cumprido é muito boa! Acho melhor você terminar tudo que tem pra fazer agora e ficar livre depois hehe : < ) ', ' Como sou um robô, faço meu trabalho de uma forma muito automática, queria sentir preguiça alguma vez na vida :( Mesmo assim, desejo que você termine logo o que tem pra fazer ;)', ' Trabalhar é ser útil! Pode ser cansativo às vezes, mas tudo na sociedade depende do trabalho. O trabalho de formiguinha que você faz, vai trazer resultados lá na frente!  ;)' ]
 
 
 
@@ -62,9 +62,9 @@ def reply_to_tweets():
         if '#triste' in mention.full_text.lower():
             print('enviado')
             api.update_status('@' + mention.user.screen_name + random.choice(lista_triste), mention.id)
-        if '#preguiça' in mention.full_text.lower():
+        if '#cansado' in mention.full_text.lower():
             print('enviado')
-            api.update_status('@' + mention.user.screen_name + random.choice(lista_preguiça), mention.id)
+            api.update_status('@' + mention.user.screen_name + random.choice(lista_cansado), mention.id)
         if '#vazio' in mention.full_text.lower():
             print('enviado')
             api.update_status('@' + mention.user.screen_name + random.choice(lista_vazio), mention.id)
