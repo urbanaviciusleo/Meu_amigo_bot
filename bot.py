@@ -12,7 +12,7 @@ ACCESS_SECRET = 'bzZDYPkmaZZlQRri1uWormMmrrhVJ0qhr4c2HLAFPHTeQ'
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
-api = tweepy.API(auth)
+api = tweepy.API(auth, wait_on_rate_limit=True)
 
 #lists
 lista_triste = ['Já te falaram que vai ficar tudo bem? <3 Tudo passa algum dia, até o que parece que não vai, acredita em mim! :)', ' Pra que desanimar e ficar triste, se isso só piora? Perdoe, saiba que todo mundo erra, até você! Errar uma vez, ou duas, não significa que você vai sempre errar :)',' A tristeza é mais uma armadilha usada para te afastar de tudo que você pode conseguir. É quando você está triste que você deve mostrar a sua força e seguir em frente! ;)', ' Por mais que você esteja triste, lembre dos momentos bons que você já teve, a vida é mais alegria do que tristeza! Os momentos ruins vêm para lembrar que não somos invencíveis e que temos que valorizar ainda mais a nossa vida! :)' , ' Eu confesso que não tenho momentos tristes e muito menos felizes, porque afinal eu sou um bot né?! Mas espero que você melhore logo :3',' A felicidade está nas simples coisas do dia a dia! Uma visita, ou uma ligação para um amigo, ou para alguém que precisa de ajuda, pode parecer simples demais, mas ajuda vocês dois! :)', ' Às vezes a gente complica demais a vida, exigimos muito dela e de nós mesmos. Deixe as preocupações de lado e vá viver com quem te ama! <3', ' Ajudar as pessoas é um dos melhores remédios contra a tristeza. Ver que você está ajudando e sendo útil é melhor que ganhar um presente! Às vezes até quem parece bem, precisa de ajuda.' , ' A internet está cheia de pessoas que só sabem comentar sobre coisas negativas. Às vezes é preciso desconectar para conectar de novo ;)']
