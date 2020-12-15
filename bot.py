@@ -56,7 +56,7 @@ def reply_to_tweets():
                         tweet_mode = 'extended')
 
     for mention in reversed(mentions):
-        print(str(mention.id) + ' - ' + mention.full_text)
+        print(str(mention.id) + mention.user.screen_name + ' - ' + mention.full_text)
         last_seen_id = mention.id
         store_last_seen_id(last_seen_id,FILE)
         if '#triste' in mention.full_text.lower():
@@ -72,4 +72,4 @@ def reply_to_tweets():
 
 while True:
     reply_to_tweets()
-    time.sleep(3)
+    time.sleep(5)
