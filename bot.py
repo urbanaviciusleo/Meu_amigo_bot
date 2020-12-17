@@ -2,7 +2,7 @@ import random
 import tweepy
 import time
 
-#config
+#config_
 
 CONSUMER_KEY = 'm30H4enVRMBYXTri4Ewc9umHV'
 CONSUMER_SECRET = 'ecySdT65iFLsxwrfuG2FbuANsjAFsm7rvBE6JdU6npGobKdgx6'
